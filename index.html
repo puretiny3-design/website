@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-area">
+      <button class="icon-button hamburger" id="menuToggle" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <a class="brand" href="#" aria-label="YouTube home">
+        <span class="youtube-mark"><span></span></span><span>YouTube</span><sup>PK</sup>
+      </a>
+    </div>
+    <form class="search-area" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Search" autocomplete="off" />
+      <button class="search-button" aria-label="Search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="7.3"/><path d="m16.2 16.2 5 5"/></svg></button>
+      <button class="icon-button mic" type="button" title="Voice search" aria-label="Voice search"><svg viewBox="0 0 24 24"><rect x="9" y="2.5" width="6" height="12" rx="3"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V22M8.5 22h7"/></svg></button>
+    </form>
+    <div class="top-actions">
+      <button class="create-button" id="createBtn"><span class="plus">＋</span> Create</button>
+      <button class="icon-button notification" aria-label="Notifications"><svg viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg><b>3</b></button>
+      <button class="avatar" aria-label="Account">🌌</button>
+    </div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <a class="side-link active" href="#" data-section="Home"><span class="side-icon">⌂</span><span>Home</span></a>
+    <a class="side-link" href="#" data-section="Shorts"><span class="side-icon shorts-icon">ϟ</span><span>Shorts</span></a>
+    <a class="side-link" href="#" data-section="Subscriptions"><span class="side-icon">▣</span><span>Subscriptions</span></a>
+    <div class="side-divider"></div>
+    <a class="side-link" href="#" data-section="You"><span class="side-icon">☻</span><span>You</span></a>
+    <a class="side-link" href="#" data-section="History"><span class="side-icon">◷</span><span>History</span></a>
+    <div class="side-divider"></div>
+    <div class="sidebar-note">Explore your favorite videos</div>
+  </aside>
+
+  <main class="main-content">
+    <nav class="chips" id="chips" aria-label="Video categories">
+      <button class="chip selected" data-category="All">All</button>
+      <button class="chip" data-category="Music">Music</button>
+      <button class="chip" data-category="Mixes">Mixes</button>
+      <button class="chip" data-category="T-Series">T-Series</button>
+      <button class="chip" data-category="News">News</button>
+      <button class="chip" data-category="Movie musicals">Movie musicals</button>
+      <button class="chip" data-category="Ajay Goga vale">Ajay Gogavale</button>
+      <button class="chip" data-category="Gaming">Gaming</button>
+      <button class="chip" data-category="APIs">APIs</button>
+      <button class="chip" data-category="Reverberation">Reverberation</button>
+      <button class="chip chip-next" id="chipNext" aria-label="More categories">›</button>
+    </nav>
+
+    <section class="video-grid" id="videoGrid" aria-live="polite">
+      <article class="video-card sponsored-card" data-category="All" data-search="grammarly ai writing app sponsored essays">
+        <div class="thumbnail ad-thumbnail">
+          <div class="grammarly-logo"><span class="g-symbol">G</span><strong>grammarly</strong></div>
+          <div class="ad-document"><small>Research Plan Template</small><hr><p>1. Introduction</p><p>2. Research objectives</p><p>3. Background and methods</p></div>
+          <div class="ai-panel"><span class="sparkle">✦</span><b>AI Chat</b><small>Create a research plan</small><p>Here is an AI-created research plan template you can use to get started.</p></div>
+          <div class="ad-title-art">AI<br>writing app</div>
+          <button class="external-arrow" aria-label="Open sponsored link">↗</button>
+        </div>
+        <div class="video-info">
+          <div class="channel-logo grammarly-small">G</div>
+          <div class="video-copy"><h3>Get that “aced it” feeling when you submit essays with Grammarly's new AI agents</h3><p><strong>Sponsored</strong> · Grammarly</p></div>
+          <button class="more-button" aria-label="More options">⋮</button>
+        </div>
+        <div class="ad-actions"><button class="watch-btn">Watch</button><button class="download-btn">Download</button></div>
+      </article>
+
+      <article class="video-card" data-category="Music Mixes" data-search="jeena yahan hai junoon neil nitin mukesh anusha mani shaan rajdeep ghosh">
+        <div class="thumbnail"><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85" alt="Moody music video thumbnail"><div class="mix-label">▣ Mix</div><div class="thumbnail-overlay"><span>Jeena<br><em>Yahan</em></span></div></div>
+        <div class="video-info"><div class="channel-logo music-logo">♫</div><div class="video-copy"><h3>Mix - Jeena Yahan | Hai Junoon! | Neil Nitin Mukesh, Anusha Mani, Shaan, Rajdeep Ghosh, Ankit K. Sharma</h3><p>Mayank Maurya, Bunny, Rajdeep Ghosh, and more · Playlist</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+
+      <article class="video-card" data-category="Music T-Series" data-search="pink saari trending song music">
+        <div class="thumbnail"><img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=900&q=85" alt="Singer performing on stage"><span class="duration">3:42</span><div class="thumbnail-overlay pink-title">PINK<br><strong>SAARI</strong></div></div>
+        <div class="video-info"><div class="channel-logo pink-logo">T</div><div class="video-copy"><h3>Pink Saari 💗 | Trending Music Video | Official Song</h3><p>T-Series · 12M views · 2 days ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+
+      <article class="video-card" data-category="Music Movie musicals" data-search="cinematic music romantic song official video">
+        <div class="thumbnail"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=85" alt="Cinematic evening scene"><span class="duration">4:18</span><div class="thumbnail-overlay romantic-title">A story<br>in every song</div></div>
+        <div class="video-info"><div class="channel-logo purple-logo">♪</div><div class="video-copy"><h3>Best Romantic Songs Collection | Official Music Video</h3><p>Music World · 890K views · 1 week ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+
+      <article class="video-card" data-category="Gaming" data-search="gaming setup gameplay highlights">
+        <div class="thumbnail"><img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=900&q=85" alt="Gaming setup"><span class="duration">18:06</span><div class="thumbnail-overlay gaming-title">GAME<br>ON!</div></div>
+        <div class="video-info"><div class="channel-logo green-logo">▶</div><div class="video-copy"><h3>Insane Gameplay Highlights You Need to See!</h3><p>PixelPlay · 245K views · 1 day ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+
+      <article class="video-card" data-category="News" data-search="daily news update world headlines">
+        <div class="thumbnail"><img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=900&q=85" alt="Newspapers and news"><span class="duration">10:25</span><div class="thumbnail-overlay news-title">THE DAILY<br>UPDATE</div></div>
+        <div class="video-info"><div class="channel-logo red-logo">N</div><div class="video-copy"><h3>Daily News Update: Today's Top Stories and Headlines</h3><p>World News Desk · 80K views · 4 hours ago</p></div><button class="more-button" aria-label="More options">⋮</button></div>
+      </article>
+    </section>
+    <div class="empty-state" id="emptyState" hidden><h2>No videos found</h2><p>Try another search or choose a different category.</p></div>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
